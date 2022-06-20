@@ -10,11 +10,11 @@ public class LinkedListFunctions {
 
     }
 
-    public void printList(){
+    public void printList() {
         Node currentNode = head;
-        while (currentNode != null){
+        while (currentNode != null) {
             System.out.print(currentNode.data + " -> ");
-            currentNode=currentNode.next;
+            currentNode = currentNode.next;
         }
         System.out.println("null");
     }
