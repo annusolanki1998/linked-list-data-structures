@@ -59,4 +59,11 @@ public class LinkedListFunctions {
         node.next = currentNode.next;
         currentNode.next = node;
     }
+    public void deleteFirst(){
+        if(head==null){
+            System.out.println("This list is empty");
+            return;
+        }
+        head = head.next;
+    }
 }
