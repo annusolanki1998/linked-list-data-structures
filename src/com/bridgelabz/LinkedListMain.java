@@ -25,6 +25,9 @@ public class LinkedListMain {
         System.out.println("Element 40 added after node 30 in the list");
         linkedListFunctions.appendingNode(30, 40);
         linkedListFunctions.printList();
+        System.out.println("Element 40 deleted from the list");
+        linkedListFunctions.deleteAnyNode(40);
+        linkedListFunctions.printList();
 
     }
 }
