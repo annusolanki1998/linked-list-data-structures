@@ -88,4 +88,14 @@ public class LinkedListFunctions {
         secondLast.next = null;
 
     }
+
+    public void findNode(int data) {
+        Node currentNode = head;
+        while (currentNode != null) {
+            if (currentNode.data == data) {
+                System.out.println(data + " Element found in the list ");
+            }
+            currentNode = currentNode.next;
+        }
+    }
 }
