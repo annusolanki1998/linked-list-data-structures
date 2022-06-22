@@ -109,4 +109,23 @@ public class LinkedListFunctions {
             currentNode = currentNode.next;
         }
     }
+
+    public void ascendingOrder() {
+        Node currentNode = head, index;
+        if (currentNode == null) {
+            System.out.println("List is empty");
+        }
+        while (currentNode != null) {
+            index = currentNode.getNext();
+            while (index != null) {
+                if (currentNode.getData() > index.getData()) {
+                    int temp = currentNode.getData();
+                    currentNode.setData(index.getData());
+                    index.setData(temp);
+                }
+                index = index.getNext();
+            }
+            currentNode = currentNode.getNext();
+        }
+    }
 }
