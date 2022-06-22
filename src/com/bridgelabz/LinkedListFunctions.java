@@ -50,6 +50,7 @@ public class LinkedListFunctions {
         currentNode.next = node;
 
     }
+
     public void insertInBetween(int before, int after, int data) {
         Node currentNode = head;
         while (currentNode.data != before && currentNode.data != after) {
@@ -59,11 +60,32 @@ public class LinkedListFunctions {
         node.next = currentNode.next;
         currentNode.next = node;
     }
-    public void deleteFirst(){
-        if(head==null){
+
+    public void deleteFirst() {
+        if (head == null) {
             System.out.println("This list is empty");
             return;
         }
         head = head.next;
+    }
+
+    public void deleteLast() {
+        if (head == null) {
+            System.out.println("This list is empty");
+            return;
+        }
+        if (head.next == null) {
+            head = null;
+            return;
+        }
+
+        Node secondLast = head;
+        Node lastNode = head.next;
+        while (lastNode.next != null) {
+            lastNode = lastNode.next;
+            secondLast = secondLast.next;
+        }
+        secondLast.next = null;
+
     }
 }
